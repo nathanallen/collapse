@@ -1,6 +1,5 @@
 body {
   margin:0;
-  max-width:20em;
   background-color: #268bd2;
   position: absolute;
 
@@ -10,6 +9,11 @@ body {
   -o-transform: rotate(-33deg);
   -ms-transform: rotate(-33deg);
   transform: rotate(-33deg);
+}
+
+.column {
+  float:left;
+  width: 10%;
 }
 
 .block {
@@ -40,9 +44,4 @@ body {
 
 .block:nth-child(11n) {
   background-color: gold;
-}
-
-.column {
-  float:left;
-  width: 33%;
 }

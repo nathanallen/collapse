@@ -1,6 +1,13 @@
 function hide_element() {
+  if ( $(this).hasClass('stuck') ) {
+    return false
+  }
   $(this).remove() //.css('visibility', "hidden")
   check_for_winner()
+}
+
+function stick_element() {
+  $(this).addClass('stuck')
 }
 
 function check_for_winner(){
@@ -18,11 +25,12 @@ function build_gameboard(columns,blocks){
     $('div.column').append("<div class='block'></div>")
   }
 
-  $('div.block').on('mouseover', hide_element)
+  $('div.block').on('mouseleave', hide_element)
+  $('div.block').on('click', stick_element)
 }
 
 $(document).ready(function(){
 
-  build_gameboard(10,20)
+  build_gameboard(10,5)
 
 });

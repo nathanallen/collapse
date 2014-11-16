@@ -18,11 +18,7 @@ function check_for_winner(){
 }
 
 function random_color(){
-  var hex = ["#"]
-  while (hex.length < 7) {
-    hex.push( Math.floor(Math.random() * 16).toString(16) )
-  }
-  return hex.join('')
+  return "#" + Math.floor(Math.random() * 16777215 ).toString(16)
 }
 
 function randomize_block_colors(el){

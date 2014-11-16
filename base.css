@@ -1,6 +1,14 @@
+body {
+    background-color: #268bd2;
+}
+
+div {
+  box-sizing: border-box;
+}
+
 section#board {
+  width: 80%;
   margin:0 auto;
-  background-color: #268bd2;
   overflow:hidden;
 }
 

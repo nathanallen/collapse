@@ -5,7 +5,6 @@ function hide_element() {
     return false
   }
   $(this).remove()//css('visibility', "hidden")
-  // check_for_winner()
 }
 
 function stick_element() {
@@ -47,20 +46,26 @@ function build_gameboard(columns,blocks){
     $columns.append("<div class='block'></div>")
   }
 
-  // set gameboard height
-  $columns.css('height', $(window).height())
-  $(window).on('resize', function(){
-    $columns.css('height', $(this).height())
-  });
 
   // randomize background colors
   $blocks = $('div.block');
   randomize_block_colors($blocks)
 
-  // set listeners
-  $blocks.on('mouseenter', pop_element)
+  // set gameboard and block heights relative to window
+  var window_height = $(window).height()
+  $columns.css('height', window_height)
+  $blocks.css('height', window_height/blocks)
+
+  $(window).on('resize', function(){
+    window_height = $(this).height()
+    $columns.css('height', window_height)
+    $blocks.css('height', window_height/blocks)
+  });
+
+  // set game listeners
   $blocks.on('mouseleave', hide_element)
   $blocks.on('click', stick_element)
+
 }
 
 $(document).ready(function(){

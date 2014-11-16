@@ -28,7 +28,3 @@ section#board {
 .stuck, .stuck:hover {
   border: 3px solid white;
 }
-
-.block.gem {
-  background-color: gold !important;
-}

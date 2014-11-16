@@ -29,7 +29,11 @@ function randomize_block_colors(el){
 }
 
 function random_gem() {
-  $($blocks[Math.floor(Math.random() * $blocks.length)]).addClass('gem')
+  var $rand_block = $($blocks[Math.floor(Math.random() * $blocks.length)])
+  if ( $rand_block.hasClass('stuck') ) {
+    return false
+  }
+  $rand_block.css('background-color', random_color())
 }
 
 function build_gameboard(columns,blocks){

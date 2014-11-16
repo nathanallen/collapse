@@ -11,7 +11,7 @@ function stick_element() {
 }
 
 function check_for_winner(){
-  if ($('div.block').length == 0) {
+  if ($blocks.length == 0) {
     console.log('You win!')
   }
 }
@@ -32,18 +32,21 @@ function randomize_block_colors(el){
 }
 
 function build_gameboard(columns,blocks){
+  $board = $('body#app');
   for (var i = 0; i < columns; i++) {
-    $('body#app').append("<div class='column'></div>")
+    $board.append("<div class='column'></div>")
   }
 
+  $columns = $('div.column');
   for (var i = 0; i < blocks; i++) {
-    $('div.column').append("<div class='block'></div>")
+    $columns.append("<div class='block'></div>")
   }
 
-  randomize_block_colors($('div.block'))
+  $blocks = $('div.block');
+  randomize_block_colors($blocks)
 
-  $('div.block').on('mouseleave', hide_element)
-  $('div.block').on('click', stick_element)
+  $blocks.on('mouseleave', hide_element)
+  $blocks.on('click', stick_element)
 }
 
 $(document).ready(function(){

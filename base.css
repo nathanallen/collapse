@@ -14,3 +14,12 @@ section#board {
   padding: 1em;
   margin-bottom: 1px;
 }
+
+.block:hover {
+  background-color:black;
+  border: 7px dotted white;
+}
+
+.stuck, .stuck:hover {
+  border: 3px solid white;
+}

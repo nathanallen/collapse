@@ -1,13 +1,5 @@
 var $board, $columns, $blocks;
 
-function pop_element() {
-  if ( $(this).hasClass('stuck') ) {
-    return false
-  }
-  $(this).css('position', 'absolute')
-         .css('border', '7px dotted white')
-}
-
 function hide_element() {
   if ( $(this).hasClass('stuck') ) {
     return false
@@ -18,8 +10,6 @@ function hide_element() {
 
 function stick_element() {
   $(this).addClass('stuck')
-         .css('position', 'inherit')
-         .css('border', '3px solid white')
 }
 
 function check_for_winner(){

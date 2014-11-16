@@ -46,7 +46,6 @@ function build_gameboard(columns,blocks){
     $columns.append("<div class='block'></div>")
   }
 
-
   // randomize background colors
   $blocks = $('div.block');
   randomize_block_colors($blocks)
@@ -70,6 +69,6 @@ function build_gameboard(columns,blocks){
 
 $(document).ready(function(){
 
-  build_gameboard(40,20)
+  build_gameboard(20,20)
 
 });

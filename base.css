@@ -1,8 +1,8 @@
 body {
-  margin:0;
-  background-color: #268bd2;
-  position: absolute;
-  overflow:hidden;
+  /*margin:0 auto;*/
+  /*background-color: #268bd2;*/
+  /*position: absolute;*/
+  /*overflow:hidden;*/
 
   /*ROTATE BODY*/
 /*  -webkit-transform: rotate(180deg);
@@ -12,9 +12,14 @@ body {
   transform: rotate(180deg);*/
 }
 
+section#board {
+  margin:0 auto;
+  background-color: #268bd2;
+  overflow:hidden;
+}
+
 .column {
   float:left;
-  width: 10%;
 }
 
 .block {
@@ -22,9 +27,4 @@ body {
   border-radius: 20px;
   padding: 1em;
   margin-bottom: 1px;
-}
-
-.block.stuck{
-  background-color:black;
-  border: dotted 3px white;
 }

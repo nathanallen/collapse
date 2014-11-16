@@ -21,10 +21,14 @@ section#board {
 }
 
 .block:hover {
-  background-color:black;
+  background-color: black;
   border: 7px dotted white;
 }
 
 .stuck, .stuck:hover {
   border: 3px solid white;
+}
+
+.block.gem {
+  background-color: gold !important;
 }

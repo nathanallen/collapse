@@ -32,6 +32,10 @@ function randomize_block_colors(el){
   }
 }
 
+function random_gem() {
+  $($blocks[Math.floor(Math.random() * $blocks.length)]).addClass('gem')
+}
+
 function build_gameboard(columns,blocks){
   // put columns on the board
   $board = $('section#board');
@@ -64,6 +68,9 @@ function build_gameboard(columns,blocks){
   // set game listeners
   $blocks.on('mouseleave', hide_element)
   $blocks.on('click', stick_element)
+
+  // create some drama
+  setInterval(random_gem, 100)
 
 }
 
